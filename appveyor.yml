@@ -5,6 +5,7 @@ branches:
     - master
 
 install:
+  - ps: remove-item $env:USERPROFILE\.nuget\packages -Force -Recurse
   # This script is for automating releases triggered by GitHub.com - or, rather, determining all the right strings 
   # You MUST use tags in the format "v[0-9]+.[0-9]+.[0-9]+-[a-z][a-z0-9]*" (like v0.1.1 or v0.1.2-rc1). You must have at least one tag for this script to work.
   # In tags, major, minor, and patch numbers are all mandatory (and build is prohibited) for this script to calculate AssemblyFileVersion correctly. 
