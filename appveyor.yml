@@ -109,7 +109,7 @@ configuration: Release
 before_build: 
   - dotnet restore src/Imageflow.dncore.sln 
   - nuget restore  tests/Imageflow.TestDotNetFull/Imageflow.TestDotNetFull.csproj -SolutionDirectory src
-  - dir src\packages\MSTest.TestAdapter.2.1.1\build
+  - dir src\packages\MSTest.TestAdapter.2.1.1\build\net45
 
 
 build:
